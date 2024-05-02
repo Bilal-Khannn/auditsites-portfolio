@@ -9,11 +9,19 @@ export function Portfolio() {
                     Unveiling the Latest Frontend Marvels
                 </p>
 
-                <div className="mt-24 flex gap-8 justify-center items-center flex-wrap">
-                    <SiteCard imgUrl="/images/bull-logo.jpeg" />
-                    <SiteCard imgUrl="/images/egis-logo.jpeg" />
-                    <SiteCard imgUrl="/images/bull-logo.jpeg" />
-                    <SiteCard imgUrl="/images/egis-logo.jpeg" />
+                <div className="mt-24 flex gap-12 justify-center items-center flex-wrap">
+                    <SiteCard
+                        imgUrl="/images/bull-logo.jpeg"
+                        videoUrl="/videos/Helium-video.mp4"
+                    />
+                    <SiteCard
+                        imgUrl="/images/egis-logo.jpeg"
+                        videoUrl="/videos/egis.mp4"
+                    />
+                    <SiteCard
+                        imgUrl="/images/9lives-logo.jpg"
+                        videoUrl="/videos/9lives.mp4"
+                    />
                 </div>
             </div>
         </div>

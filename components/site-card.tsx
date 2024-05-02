@@ -1,22 +1,24 @@
+'use client';
 import * as React from 'react';
 
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle
-} from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
+import { Card, CardContent } from '@/components/ui/card';
+
 import Image from 'next/image';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import { Button } from '@/components/ui/button';
+import { VideoDialog } from './video-dialog';
+import { useState } from 'react';
 
-export function SiteCard({ imgUrl }: { imgUrl: string }) {
+export function SiteCard({
+    imgUrl,
+    videoUrl
+}: {
+    imgUrl: string;
+    videoUrl: string;
+}) {
+    const [openDialog, setOpenDialog] = useState<boolean>(false);
     return (
-        <Card className="w-[350px] rounded-lg border border-purple-500">
+        <Card className="w-[350px] rounded-lg shadow-lg shadow-purple-500">
             <CardContent className="p-0">
                 <div>
                     <Image
@@ -25,6 +27,9 @@ export function SiteCard({ imgUrl }: { imgUrl: string }) {
                         height={200}
                         width={200}
                         className="cursor-pointer w-full rounded-tl-lg rounded-tr-lg hover:opacity-70 transition delay-75"
+                        onClick={() => {
+                            setOpenDialog(true);
+                        }}
                     />
                 </div>
 
@@ -33,6 +38,11 @@ export function SiteCard({ imgUrl }: { imgUrl: string }) {
                         Visit the site <FaExternalLinkAlt />
                     </Button>
                 </div>
+                <VideoDialog
+                    openDialog={openDialog}
+                    setOpenDialog={setOpenDialog}
+                    videoUrl={videoUrl}
+                />
             </CardContent>
         </Card>
     );
