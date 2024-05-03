@@ -5,12 +5,13 @@ import { Portfolio } from '@/components/portfolio';
 
 export default function Home() {
     return (
-        <div >
+        <div>
             <Header />
             <Hero />
             <Portfolio />
-            <div className='p-2'><Footer /></div>
-            
+            <div className="p-2">
+                <Footer />
+            </div>
         </div>
     );
 }

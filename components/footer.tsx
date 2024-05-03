@@ -18,14 +18,14 @@ export function Footer() {
                 <div className="flex gap-4 items-center">
                     <Link
                         className="text-xl z-50 text-purple-500 hover:text-purple-400 transition delay-75"
-                        href="https://t.me/dethSCA"
+                        href="https://t.me/NirlinSecurity"
                         target="__blank"
                         rel="noreferrer noopener"
                     >
                         <FaTelegramPlane size={30} />
                     </Link>
                     <Link
-                        href="https://x.com/EgisSec?s=09"
+                        href="https://twitter.com/0xnirlin"
                         target="__blank"
                         rel="noreferrer noopener"
                         className="text-xl z-50 text-purple-500 hover:text-purple-400 transition delay-75"
