@@ -10,6 +10,7 @@ import {
 } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { Textarea } from './ui/textarea';
 
 export function Contact({
     openDialog,
@@ -30,11 +31,16 @@ export function Contact({
                 </DialogHeader>
                 <form>
                     <div className="grid w-full items-center gap-4">
-                        <div className="flex flex-col space-y-1.5">
+                        <div className="flex flex-col space-y-4">
                             <Label htmlFor="name">Name</Label>
                             <Input
                                 id="name"
-                                placeholder="Name of your project"
+                                placeholder="Your name"
+                            />
+                            <Label htmlFor="name">Message</Label>
+                            <Textarea
+                                id="name"
+                                placeholder="What are you looking for"
                             />
                         </div>
                     </div>

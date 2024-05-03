@@ -8,13 +8,16 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
 import { Button } from '@/components/ui/button';
 import { VideoDialog } from './video-dialog';
 import { useState } from 'react';
+import Link from 'next/link';
 
 export function SiteCard({
     imgUrl,
-    videoUrl
+    videoUrl,
+    siteUrl
 }: {
     imgUrl: string;
     videoUrl: string;
+    siteUrl: string;
 }) {
     const [openDialog, setOpenDialog] = useState<boolean>(false);
     return (
@@ -34,8 +37,15 @@ export function SiteCard({
                 </div>
 
                 <div className="flex flex-col gap-2 p-5">
-                    <Button className="gap-2">
-                        Visit the site <FaExternalLinkAlt />
+                    <Button asChild>
+                        <Link
+                            className="gap-2"
+                            href={siteUrl}
+                            target="__blank"
+                            rel="noreferrer noopener"
+                        >
+                            Visit the site <FaExternalLinkAlt />
+                        </Link>
                     </Button>
                 </div>
                 <VideoDialog

@@ -19,7 +19,7 @@ export function Hero() {
                     Frontier Forge
                 </h2>
                 <p className="text-white/80 text-sm md:text-2xl max-w-xl mt-6 text-center">
-                    Crafting Dynamic Frontends for Decentralized Excellence
+                    Crafting <span className='text-purple-500 font-bold'>Dynamic Frontends</span> for Decentralized Excellence
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center gap-4 mt-6">
