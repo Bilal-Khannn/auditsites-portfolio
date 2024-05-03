@@ -2,9 +2,11 @@ import { SiteCard } from './site-card';
 
 export function Portfolio() {
     return (
-        <div className="py-40">
+        <div className="py-14 sm:py-40 max-w-7xl mx-auto" id="showcase">
             <div className="flex flex-col gap-4 justify-center items-center">
-                <h1 className="font-bold text-4xl lg:text-5xl text-center">Our Showcase</h1>
+                <h1 className="font-bold text-2xl md:text-4xl lg:text-5xl text-center">
+                    Our Showcase
+                </h1>
                 <p className="text-base lg:text-xl text-white/70 text-center">
                     Unveiling the Latest Frontend Marvels
                 </p>

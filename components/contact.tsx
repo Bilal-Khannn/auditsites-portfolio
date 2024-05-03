@@ -11,6 +11,7 @@ import {
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from './ui/textarea';
+import { useForm, ValidationError } from '@formspree/react';
 
 export function Contact({
     openDialog,
@@ -19,6 +20,8 @@ export function Contact({
     openDialog: boolean;
     setOpenDialog: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
+    const [state, handleSubmit] = useForm('YOUR_FORM_ID');
+
     return (
         <Dialog open={openDialog} onOpenChange={setOpenDialog}>
             <DialogContent className="sm:max-w-[425px]">
@@ -29,25 +32,28 @@ export function Contact({
                         as possible.
                     </DialogDescription>
                 </DialogHeader>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div className="grid w-full items-center gap-4">
                         <div className="flex flex-col space-y-4">
-                            <Label htmlFor="name">Name</Label>
+                            <Label htmlFor="email">Email</Label>
                             <Input
-                                id="name"
-                                placeholder="Your name"
+                                id="email"
+                                type="email"
+                                placeholder="Your email"
                             />
-                            <Label htmlFor="name">Message</Label>
+                            <Label htmlFor="name">Name</Label>
+                            <Input id="name" placeholder="Your name" />
+                            <Label htmlFor="message">Message</Label>
                             <Textarea
-                                id="name"
+                                id="message"
                                 placeholder="What are you looking for"
                             />
                         </div>
                     </div>
+                    <div className="flex justify-end items-end mt-6">
+                        <Button type="submit">Submit</Button>
+                    </div>
                 </form>
-                <DialogFooter>
-                    <Button type="submit">Submit</Button>
-                </DialogFooter>
             </DialogContent>
         </Dialog>
     );

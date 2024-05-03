@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { VideoDialog } from './video-dialog';
 import { useState } from 'react';
 import Link from 'next/link';
+import { HoverBorderGradientButton } from './hover-border-gradient';
 
 export function SiteCard({
     imgUrl,
@@ -23,17 +24,19 @@ export function SiteCard({
     return (
         <Card className="w-[350px] rounded-lg shadow-lg shadow-purple-500">
             <CardContent className="p-0">
-                <div>
+                <div className="relative">
                     <Image
                         src={imgUrl}
                         alt="Starkbull logo"
                         height={200}
                         width={200}
-                        className="cursor-pointer w-full rounded-tl-lg rounded-tr-lg hover:opacity-70 transition delay-75"
-                        onClick={() => {
-                            setOpenDialog(true);
-                        }}
+                        className=" w-full rounded-tl-lg rounded-tr-lg"
                     />
+                    <div className="absolute inset-0 flex justify-center -top-36">
+                        <HoverBorderGradientButton
+                            setOpenDialog={setOpenDialog}
+                        />
+                    </div>
                 </div>
 
                 <div className="flex flex-col gap-2 p-5">
