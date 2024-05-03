@@ -12,6 +12,8 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from './ui/textarea';
 import { useForm, ValidationError } from '@formspree/react';
+import { useToast } from './ui/use-toast';
+import { useEffect } from 'react';
 
 export function Contact({
     openDialog,
@@ -20,7 +22,20 @@ export function Contact({
     openDialog: boolean;
     setOpenDialog: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
-    const [state, handleSubmit] = useForm('YOUR_FORM_ID');
+    const [state, handleSubmit] = useForm('mbjnwzvv');
+    const { toast } = useToast();
+
+    useEffect(() => {
+        if (state.succeeded) {
+            toast({
+                duration: 2000,
+                description:
+                    'Thank you for reaching out! We have received your message and will get back to you as soon as possible.'
+            });
+
+            setOpenDialog(false);
+        }
+    }, [state.succeeded]);
 
     return (
         <Dialog open={openDialog} onOpenChange={setOpenDialog}>
@@ -37,15 +52,24 @@ export function Contact({
                         <div className="flex flex-col space-y-4">
                             <Label htmlFor="email">Email</Label>
                             <Input
+                                required
                                 id="email"
                                 type="email"
+                                name="email"
                                 placeholder="Your email"
                             />
                             <Label htmlFor="name">Name</Label>
-                            <Input id="name" placeholder="Your name" />
+                            <Input
+                                required
+                                id="name"
+                                name="name"
+                                placeholder="Your name"
+                            />
                             <Label htmlFor="message">Message</Label>
                             <Textarea
+                                required
                                 id="message"
+                                name="message"
                                 placeholder="What are you looking for"
                             />
                         </div>

@@ -17,7 +17,7 @@ export function Header() {
             <div className="flex gap-6 items-center">
                 <Link
                     className="text-xl z-50 hidden sm:block text-purple-500 hover:text-purple-400 transition delay-75"
-                    href="https://t.me/dethSCA"
+                    href="https://t.me/NirlinSecurity"
                     target="__blank"
                     rel="noreferrer noopener"
                 >

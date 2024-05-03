@@ -18,15 +18,12 @@ export function Hero() {
                 backgroundColor="transparent"
                 className="flex items-center flex-col justify-center py-4 w-screen h-full"
             >
-                <h2 className="text-white text-2xl md:text-6xl font-bold text-center">
-                    Frontier Forge
+                <h2 className="text-white text-2xl md:text-5xl font-bold text-center max-w-3xl">
+                    Branding for Security Auditors, by Crypto Natives
                 </h2>
                 <p className="text-white/80 text-sm md:text-2xl max-w-xl mt-6 text-center">
-                    Crafting{' '}
-                    <span className="text-purple-500 font-bold">
-                        Dynamic Frontends
-                    </span>{' '}
-                    for Decentralized Excellence
+                    Make Strong First Impression. Trust Our Expertise to Elevate
+                    Your Web3 Presence
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center gap-4 mt-6">
@@ -36,7 +33,7 @@ export function Hero() {
                     <div className="flex gap-4 items-center">
                         <Link
                             className="text-xl z-50 sm:hidden text-white-500 hover:text-purple-400 transition delay-75"
-                            href="https://t.me/dethSCA"
+                            href="https://t.me/NirlinSecurity"
                             target="__blank"
                             rel="noreferrer noopener"
                         >
