@@ -12,7 +12,7 @@ export function Header() {
         <div className="flex justify-center sm:justify-between items-center p-6 max-w-7xl mx-auto">
             <Contact openDialog={openDialog} setOpenDialog={setOpenDialog} />
             <h1 className="font-bold italic text-2xl  lg:text-3xl">
-                Auditsites
+                Auditorsites
             </h1>
             <div className="flex gap-6 items-center">
                 <Link

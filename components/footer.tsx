@@ -14,7 +14,7 @@ export function Footer() {
         <div className="max-w-6xl mx-auto mt-10 mb-10">
             <Contact openDialog={openDialog} setOpenDialog={setOpenDialog} />
             <div className="flex justify-center items-center flex-col gap-6">
-                <h1 className="text-4xl font-bold">Auditsites</h1>
+                <h1 className="text-4xl font-bold">Auditorsites</h1>
                 <div className="flex gap-4 items-center">
                     <Link
                         className="text-xl z-50 text-purple-500 hover:text-purple-400 transition delay-75"
